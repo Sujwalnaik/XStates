@@ -126,10 +126,6 @@ function App() {
           style={{
             fontWeight: 700,
             fontSize: "20px",
-            display: "flex",
-            gap: 10,
-            justifyContent: "center",
-            alignItems: "center",
           }}
         >
           You selected <span style={{ fontSize: "30px" }}> {selectedCity}</span>
