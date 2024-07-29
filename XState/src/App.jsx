@@ -132,10 +132,13 @@ function App() {
             fontSize: "20px",
           }}
         >
-          You selected <span style={{ fontSize: "30px" }}> {selectedCity}</span>
+          You Selected{" "}
+          <span style={{ fontSize: "30px", marginRight: "10px" }}>
+            {selectedCity}
+          </span>
           ,
-          <span fontSize={"25px"} style={{ color: "gray" }}>
-            {seletedState},{selectedCountry}
+          <span style={{ fontSize: "25px", color: "gray", marginLeft: "10px" }}>
+            {seletedState}, {selectedCountry}
           </span>
         </div>
       ) : (
