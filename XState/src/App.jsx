@@ -85,34 +85,38 @@ function App() {
           onChange={(e) => setSelectedCountry(e.target.value)}
           style={{ padding: "10px" }}
         >
-          <option value="">Select a country</option>
+          <option value="">Select Country</option>
           {countries.map((country, index) => (
             <option key={index} value={country}>
               {country}
             </option>
           ))}
         </select>
-        <select
-          style={{ padding: "10px" }}
-          name="states"
-          id="states"
-          onChange={(e) => setSeletedState(e.target.value)}
-        >
-          <option value="">Select a State</option>
+        <div>
+          <select
+            style={{ padding: "10px" }}
+            disabled={!selectedCountry}
+            name="states"
+            id="states"
+            onChange={(e) => setSeletedState(e.target.value)}
+          >
+            <option value="">Select State</option>
 
-          {states.map((state, index) => (
-            <option key={index} value={state}>
-              {state}
-            </option>
-          ))}
-        </select>
+            {states.map((state, index) => (
+              <option key={index} value={state}>
+                {state}
+              </option>
+            ))}
+          </select>
+        </div>
         <select
           style={{ padding: "10px" }}
           name="city"
           id="city"
+          disabled={!seletedState}
           onChange={(e) => setSeletedCity(e.target.value)}
         >
-          <option value="city">Select a City</option>
+          <option value="city">Select City</option>
 
           {city.map((state, index) => (
             <option key={index} value={state}>
